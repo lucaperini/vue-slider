@@ -58,11 +58,13 @@ div.my-carousel-images{
     top:50%;
     transform:translate(-50%, -50%);
     filter: brightness(.4);
+    
 }
 
 .thumbnail-item.active{
     filter:brightness(1);
     border: 3px solid goldenrod;
+    
 }
 
 .thumbnail-box{
@@ -106,3 +108,4 @@ div.my-next > span::after{
     line-height: 30px;
     color:black;
 }
+

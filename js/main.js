@@ -1,8 +1,13 @@
 const app = new Vue(
     {
         el : "#app",
+        
+
         data: {
-            items : slider = [
+            
+            activeElement : 0,
+
+            slides : [
                 {
                     image: 'https://picsum.photos/750/350?random=1',
                     title: 'Random #1',
@@ -38,7 +43,24 @@ const app = new Vue(
                 },
                 
             ]
-        }
+        },
+        methods: {
+            
+            prevImage(){
+                if(this.activeElement === 0){
+                    this.activeElement = this.slides.length -1;
+                }else{
+                    this.activeElement--;
+                }
+            },
+            nextImage(){
+                if(this.activeElement === this.slides.length -1){
+                    this.activeElement = 0;
+                }else{
+                    this.activeElement++;
+                }
+            },
+        },
     }
     
 );
